@@ -62,12 +62,12 @@ function Fr([string]$t) {
 function Get-Intro($e) {
     $name = $e.name; $mrc = $e.mrc_name
     if ($e.is_borough) {
-        return "Vous souhaitez vendre ou acheter une propri&eacute;t&eacute; de prestige dans l'arrondissement $name &agrave; Sherbrooke ? L'&Eacute;quipe Chiasson de Francesco, courtiers immobiliers RE/MAX D'ABORD, conna&icirc;t intimement le march&eacute; immobilier de ce secteur sherbrookois. De la mise en march&eacute; haut de gamme &agrave; la n&eacute;gociation strat&eacute;gique, nous maximisons la valeur de votre patrimoine dans l'un des arrondissements les plus recherch&eacute;s de l'Estrie."
+        return "Vous souhaitez vendre ou acheter une propri&eacute;t&eacute; de prestige dans l'arrondissement $name &agrave; Sherbrooke ? L'&Eacute;quipe Chiasson De Francesco, courtiers immobiliers RE/MAX D'ABORD, conna&icirc;t intimement le march&eacute; immobilier de ce secteur sherbrookois. De la mise en march&eacute; haut de gamme &agrave; la n&eacute;gociation strat&eacute;gique, nous maximisons la valeur de votre patrimoine dans l'un des arrondissements les plus recherch&eacute;s de l'Estrie."
     }
     if ($e.type -eq 'ville') {
-        return "Le march&eacute; immobilier &agrave; $name exige une expertise locale et une mise en march&eacute; irr&eacute;prochable. Bas&eacute;s &agrave; Sherbrooke et actifs dans toute la MRC $mrc, les courtiers de l'&Eacute;quipe Chiasson de Francesco accompagnent vendeurs et acheteurs de propri&eacute;t&eacute;s r&eacute;sidentielles et commerciales &agrave; $name avec rigueur, transparence et un service de prestige."
+        return "Le march&eacute; immobilier &agrave; $name exige une expertise locale et une mise en march&eacute; irr&eacute;prochable. Bas&eacute;s &agrave; Sherbrooke et actifs dans toute la MRC $mrc, les courtiers de l'&Eacute;quipe Chiasson De Francesco accompagnent vendeurs et acheteurs de propri&eacute;t&eacute;s r&eacute;sidentielles et commerciales &agrave; $name avec rigueur, transparence et un service de prestige."
     }
-    return "Que vous poss&eacute;diez une r&eacute;sidence, un chalet ou un terrain &agrave; $name, la vente d'une propri&eacute;t&eacute; en Estrie demande un courtier qui comprend les r&eacute;alit&eacute;s du march&eacute; de la MRC $mrc. L'&Eacute;quipe Chiasson de Francesco offre une &eacute;valuation immobili&egrave;re gratuite, une strat&eacute;gie de mise en march&eacute; sur mesure et un accompagnement personnalis&eacute; pour chaque transaction &agrave; $name."
+    return "Que vous poss&eacute;diez une r&eacute;sidence, un chalet ou un terrain &agrave; $name, la vente d'une propri&eacute;t&eacute; en Estrie demande un courtier qui comprend les r&eacute;alit&eacute;s du march&eacute; de la MRC $mrc. L'&Eacute;quipe Chiasson De Francesco offre une &eacute;valuation immobili&egrave;re gratuite, une strat&eacute;gie de mise en march&eacute; sur mesure et un accompagnement personnalis&eacute; pour chaque transaction &agrave; $name."
 }
 
 function Get-Market($e) {
@@ -100,7 +100,7 @@ function Render-MuniPage($e) {
         $bcName = $mrc; $bcUrl = "$BaseUrl/estrie/mrc-$mrcSlug/"
     }
     $canonical = "$BaseUrl/estrie/$slug/"
-    $desc = "Courtiers immobiliers RE/MAX &agrave; $geo, Estrie. &Eacute;quipe Chiasson de Francesco - &eacute;valuation gratuite, vente et achat de propri&eacute;t&eacute;s de prestige. MRC $mrc. Appelez (819) 919-4631."
+    $desc = "Courtiers immobiliers RE/MAX &agrave; $geo, Estrie. &Eacute;quipe Chiasson De Francesco - &eacute;valuation gratuite, vente et achat de propri&eacute;t&eacute;s de prestige. MRC $mrc. Appelez (819) 919-4631."
     $intro = Get-Intro $e
     $market = Get-Market $e
     $typLabel = $TypeLabels[$e.type]
@@ -119,9 +119,9 @@ function Render-MuniPage($e) {
     $h2Near = "Autres municipalit&eacute;s - MRC $mrc"
     $linkAll = "Voir toutes les municipalit&eacute;s de l'Estrie"
     $navMuni = "Municipalit&eacute;s"
-    $footTeam = "&Eacute;quipe Chiasson de Francesco &middot; RE/MAX D'ABORD"
-    $ogTitle = "Courtier immobilier $name | &Eacute;quipe Chiasson de Francesco"
-    $schemaName = "&Eacute;quipe Chiasson de Francesco - $name"
+    $footTeam = "&Eacute;quipe Chiasson De Francesco &middot; RE/MAX D'ABORD"
+    $ogTitle = "Courtier immobilier $name | &Eacute;quipe Chiasson De Francesco"
+    $schemaName = "&Eacute;quipe Chiasson De Francesco - $name"
 
     @"
 <!DOCTYPE html>
@@ -246,7 +246,7 @@ foreach ($mrc in $mrcs) {
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courtier immobilier MRC $($mrc.name) | Estrie - immobiliermaison.com</title>
-    <meta name="description" content="Courtiers immobiliers RE/MAX dans la MRC $($mrc.name), Estrie. $($muniEntries.Count) municipalites desservies par l'Equipe Chiasson de Francesco.">
+    <meta name="description" content="Courtiers immobiliers RE/MAX dans la MRC $($mrc.name), Estrie. $($muniEntries.Count) municipalites desservies par l'Équipe Chiasson De Francesco.">
     <link rel="canonical" href="$BaseUrl/estrie/mrc-$($mrc.slug)/">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config={theme:{extend:{colors:{remaxRed:'#E11B22',luxuryDark:'#0A1128'},fontFamily:{serif:['Playfair Display','serif'],sans:['Montserrat','sans-serif']}}}}</script>
@@ -257,7 +257,7 @@ foreach ($mrc in $mrcs) {
     <main class="max-w-7xl mx-auto px-6 py-16">
         <nav class="text-sm text-gray-400 mb-6"><a href="$BaseUrl/estrie/">Estrie</a> / MRC $($mrc.name)</nav>
         <h1 class="font-serif text-4xl md:text-5xl text-luxuryDark mb-6">Courtier immobilier - MRC $($mrc.name)</h1>
-        <p class="text-gray-500 font-light text-lg max-w-3xl mb-12">L'Equipe Chiasson de Francesco dessert l'ensemble de la MRC $($mrc.name) en Estrie. Chef-lieu : $($mrc.chef_lieu).</p>
+        <p class="text-gray-500 font-light text-lg max-w-3xl mb-12">L'Équipe Chiasson De Francesco dessert l'ensemble de la MRC $($mrc.name) en Estrie. Chef-lieu : $($mrc.chef_lieu).</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">$links</div>
     </main>
 </body>
@@ -287,7 +287,7 @@ $estrieHtml = @"
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courtier immobilier Estrie | Cantons-de-l'Est - immobiliermaison.com</title>
-    <meta name="description" content="Courtiers immobiliers RE/MAX dans toute l'Estrie. $($entries.Count) municipalites desservies. Equipe Chiasson de Francesco.">
+    <meta name="description" content="Courtiers immobiliers RE/MAX dans toute l'Estrie. $($entries.Count) municipalites desservies. Équipe Chiasson De Francesco.">
     <link rel="canonical" href="$BaseUrl/estrie/">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config={theme:{extend:{colors:{remaxRed:'#E11B22',luxuryDark:'#0A1128'},fontFamily:{serif:['Playfair Display','serif'],sans:['Montserrat','sans-serif']}}}}</script>
@@ -297,7 +297,7 @@ $estrieHtml = @"
     <header class="bg-luxuryDark text-white py-8"><div class="max-w-7xl mx-auto px-6"><a href="$BaseUrl/" class="font-serif text-3xl font-bold uppercase">Immobilier<span class="text-remaxRed">maison</span></a></div></header>
     <main class="max-w-7xl mx-auto px-6 py-16">
         <h1 class="font-serif text-4xl md:text-6xl text-luxuryDark mb-6">Courtier immobilier en Estrie</h1>
-        <p class="text-gray-500 font-light text-lg max-w-3xl mb-12">L'Estrie compte 9 MRC et $($entries.Count) municipalites. L'Equipe Chiasson de Francesco dessert l'ensemble du territoire.</p>
+        <p class="text-gray-500 font-light text-lg max-w-3xl mb-12">L'Estrie compte 9 MRC et $($entries.Count) municipalites. L'Équipe Chiasson De Francesco dessert l'ensemble du territoire.</p>
         <p class="mb-12"><a href="$BaseUrl/estrie/municipalites/" class="text-remaxRed font-semibold text-sm uppercase tracking-widest">Index alphabetique complet</a></p>
         $mrcSections
     </main>
