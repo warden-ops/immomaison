@@ -278,7 +278,7 @@ def intro_paragraph(entry):
     if entry.get("is_borough"):
         return (
             f"Vous souhaitez vendre ou acheter une propriété de prestige dans l'arrondissement {name} à Sherbrooke ? "
-            f"L'Équipe Chiasson de Francesco, courtiers immobiliers RE/MAX D'ABORD, connaît intimement le marché "
+            f"L'Équipe Chiasson De Francesco, courtiers immobiliers RE/MAX D'ABORD, connaît intimement le marché "
             f"immobilier de ce secteur sherbrookois. De la mise en marché haut de gamme à la négociation stratégique, "
             f"nous maximisons la valeur de votre patrimoine dans l'un des arrondissements les plus recherchés de l'Estrie."
         )
@@ -286,14 +286,14 @@ def intro_paragraph(entry):
     if entry["type"] == "ville":
         return (
             f"Le marché immobilier à {name} exige une expertise locale et une mise en marché irréprochable. "
-            f"Basés à Sherbrooke et actifs dans toute la MRC {mrc}, les courtiers de l'Équipe Chiasson de Francesco "
+            f"Basés à Sherbrooke et actifs dans toute la MRC {mrc}, les courtiers de l'Équipe Chiasson De Francesco "
             f"accompagnent vendeurs et acheteurs de propriétés résidentielles et commerciales à {name} avec rigueur, "
             f"transparence et un service de prestige."
         )
 
     return (
         f"Que vous possédiez une résidence, un chalet ou un terrain à {name}, la vente d'une propriété en Estrie "
-        f"demande un courtier qui comprend les réalités du marché de la MRC {mrc}. L'Équipe Chiasson de Francesco "
+        f"demande un courtier qui comprend les réalités du marché de la MRC {mrc}. L'Équipe Chiasson De Francesco "
         f"offre une évaluation immobilière gratuite, une stratégie de mise en marché sur mesure et un accompagnement "
         f"personnalisé pour chaque transaction à {name}."
     )
@@ -332,12 +332,12 @@ def render_page(entry, all_entries, page_kind="municipality"):
         breadcrumb_mid = (mrc, f"{BASE_URL}/estrie/mrc-{mrc_slug}/")
 
     description = (
-        f"Courtiers immobiliers RE/MAX à {geo_name}, Estrie. Équipe Chiasson de Francesco — évaluation gratuite, "
+        f"Courtiers immobiliers RE/MAX à {geo_name}, Estrie. Équipe Chiasson De Francesco — évaluation gratuite, "
         f"vente et achat de propriétés de prestige. MRC {mrc}. Appelez (819) 919-4631."
     )
     keywords = (
         f"courtier immobilier {name}, vendre maison {name}, immobilier {name}, immobilier Estrie, "
-        f"équipe chiasson de francesco, RE/MAX {name}, évaluation immobilière {name}, MRC {mrc}"
+        f"Équipe Chiasson De Francesco, RE/MAX {name}, évaluation immobilière {name}, MRC {mrc}"
     )
 
     neighbors = nearby(all_entries, entry)
@@ -362,7 +362,7 @@ def render_page(entry, all_entries, page_kind="municipality"):
     <meta name="description" content="{description}">
     <meta name="keywords" content="{keywords}">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="author" content="Équipe Chiasson de Francesco">
+    <meta name="author" content="Équipe Chiasson De Francesco">
     <meta name="geo.region" content="CA-QC">
     <meta name="geo.placename" content="{geo_name}">
     <meta name="theme-color" content="#0A1128">
@@ -371,7 +371,7 @@ def render_page(entry, all_entries, page_kind="municipality"):
     <meta property="og:type" content="website">
     <meta property="og:url" content="{canonical}">
     <meta property="og:site_name" content="Immobiliermaison.com">
-    <meta property="og:title" content="Courtier immobilier {name} | Équipe Chiasson de Francesco">
+    <meta property="og:title" content="Courtier immobilier {name} | Équipe Chiasson De Francesco">
     <meta property="og:description" content="{description}">
     <meta property="og:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
     <meta property="og:locale" content="fr_CA">
@@ -409,7 +409,7 @@ def render_page(entry, all_entries, page_kind="municipality"):
             }},
             {{
                 "@type": "RealEstateAgent",
-                "name": "Équipe Chiasson de Francesco — {name}",
+                "name": "Équipe Chiasson De Francesco — {name}",
                 "url": "{canonical}",
                 "telephone": "+1-819-919-4631",
                 "email": "info@immobiliermaison.com",
@@ -477,7 +477,7 @@ def render_page(entry, all_entries, page_kind="municipality"):
                         <li class="flex gap-3"><span class="text-remaxRed">✓</span> Évaluation immobilière gratuite et confidentielle</li>
                         <li class="flex gap-3"><span class="text-remaxRed">✓</span> Mise en marché haut de gamme (photo, vidéo, drone)</li>
                         <li class="flex gap-3"><span class="text-remaxRed">✓</span> Réseau RE/MAX — visibilité locale et internationale</li>
-                        <li class="flex gap-3"><span class="text-remaxRed">✓</span> Avis Google 5 étoiles — Équipe Chiasson de Francesco</li>
+                        <li class="flex gap-3"><span class="text-remaxRed">✓</span> Avis Google 5 étoiles — Équipe Chiasson De Francesco</li>
                     </ul>
                 </div>
                 <div id="contact" class="bg-white p-6 shadow-floating border border-gray-100">
@@ -505,7 +505,7 @@ def render_page(entry, all_entries, page_kind="municipality"):
         <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between gap-8 text-sm text-gray-400 font-light">
             <div>
                 <p class="font-serif text-xl text-white mb-2">Immobilier<span class="text-remaxRed">maison</span></p>
-                <p>Équipe Chiasson de Francesco · RE/MAX D'ABORD · Sherbrooke</p>
+                <p>Équipe Chiasson De Francesco · RE/MAX D'ABORD · Sherbrooke</p>
             </div>
             <div class="space-y-1">
                 <p><a href="tel:+18199194631" class="hover:text-white">(819) 919-4631</a></p>
@@ -539,7 +539,7 @@ def render_mrc_hub(mrc, entries):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courtier immobilier MRC {name} | Estrie — immobiliermaison.com</title>
-    <meta name="description" content="Courtiers immobiliers RE/MAX dans la MRC {name}, Estrie. {len(muni_entries)} municipalités desservies par l'Équipe Chiasson de Francesco. Évaluation gratuite.">
+    <meta name="description" content="Courtiers immobiliers RE/MAX dans la MRC {name}, Estrie. {len(muni_entries)} municipalités desservies par l'Équipe Chiasson De Francesco. Évaluation gratuite.">
     <link rel="canonical" href="{canonical}">
     <meta name="robots" content="index, follow">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -551,7 +551,7 @@ def render_mrc_hub(mrc, entries):
     <main class="max-w-7xl mx-auto px-6 py-16">
         <nav class="text-sm text-gray-400 mb-6"><a href="{BASE_URL}/estrie/">Estrie</a> / MRC {name}</nav>
         <h1 class="font-serif text-4xl md:text-5xl text-luxuryDark mb-6">Courtier immobilier — MRC {name}</h1>
-        <p class="text-gray-500 font-light text-lg max-w-3xl mb-12">L'Équipe Chiasson de Francesco dessert l'ensemble de la MRC {name} en Estrie. Chef-lieu : {mrc["chef_lieu"]}. Sélectionnez votre municipalité pour une évaluation immobilière gratuite.</p>
+        <p class="text-gray-500 font-light text-lg max-w-3xl mb-12">L'Équipe Chiasson De Francesco dessert l'ensemble de la MRC {name} en Estrie. Chef-lieu : {mrc["chef_lieu"]}. Sélectionnez votre municipalité pour une évaluation immobilière gratuite.</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">{links}</div>
     </main>
     <footer class="bg-luxuryDark text-gray-400 text-center py-8 text-sm"><a href="{BASE_URL}/estrie/municipalites/" class="hover:text-white">Toutes les municipalités de l'Estrie</a></footer>
@@ -584,8 +584,8 @@ def render_estrie_hub(entries, mrcs):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courtier immobilier Estrie | Cantons-de-l'Est — immobiliermaison.com</title>
-    <meta name="description" content="Courtiers immobiliers RE/MAX dans toute l'Estrie (Cantons-de-l'Est). {len(entries)} municipalités desservies. Équipe Chiasson de Francesco — évaluation gratuite, vente et achat immobilier de prestige.">
-    <meta name="keywords" content="courtier immobilier Estrie, immobilier Cantons-de-l'Est, vendre maison Estrie, RE/MAX Estrie, équipe chiasson de francesco">
+    <meta name="description" content="Courtiers immobiliers RE/MAX dans toute l'Estrie (Cantons-de-l'Est). {len(entries)} municipalités desservies. Équipe Chiasson De Francesco — évaluation gratuite, vente et achat immobilier de prestige.">
+    <meta name="keywords" content="courtier immobilier Estrie, immobilier Cantons-de-l'Est, vendre maison Estrie, RE/MAX Estrie, Équipe Chiasson De Francesco">
     <link rel="canonical" href="{BASE_URL}/estrie/">
     <meta name="robots" content="index, follow">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -594,10 +594,10 @@ def render_estrie_hub(entries, mrcs):
     <script type="application/ld+json">{{"@context":"https://schema.org","@type":"WebPage","name":"Courtier immobilier Estrie","description":"Pages SEO par municipalité en Estrie","url":"{BASE_URL}/estrie/"}}</script>
 </head>
 <body class="font-sans bg-[#FDFDFD]">
-    <header class="bg-luxuryDark text-white py-8"><div class="max-w-7xl mx-auto px-6 lg:px-12"><a href="{BASE_URL}/" class="font-serif text-3xl font-bold uppercase">Immobilier<span class="text-remaxRed">maison</span></a><p class="text-gray-400 text-sm mt-2">Équipe Chiasson de Francesco · RE/MAX D'ABORD</p></div></header>
+    <header class="bg-luxuryDark text-white py-8"><div class="max-w-7xl mx-auto px-6 lg:px-12"><a href="{BASE_URL}/" class="font-serif text-3xl font-bold uppercase">Immobilier<span class="text-remaxRed">maison</span></a><p class="text-gray-400 text-sm mt-2">Équipe Chiasson De Francesco · RE/MAX D'ABORD</p></div></header>
     <main class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
         <h1 class="font-serif text-4xl md:text-6xl text-luxuryDark mb-6">Courtier immobilier en Estrie</h1>
-        <p class="text-gray-500 font-light text-lg max-w-3xl mb-4">L'Estrie — aussi connue sous le nom des Cantons-de-l'Est — compte 9 MRC et {len(entries)} municipalités. L'Équipe Chiasson de Francesco, basée à Sherbrooke, dessert l'ensemble du territoire pour la vente et l'achat de propriétés résidentielles, commerciales et de prestige.</p>
+        <p class="text-gray-500 font-light text-lg max-w-3xl mb-4">L'Estrie — aussi connue sous le nom des Cantons-de-l'Est — compte 9 MRC et {len(entries)} municipalités. L'Équipe Chiasson De Francesco, basée à Sherbrooke, dessert l'ensemble du territoire pour la vente et l'achat de propriétés résidentielles, commerciales et de prestige.</p>
         <p class="mb-12"><a href="{BASE_URL}/estrie/municipalites/" class="text-remaxRed font-semibold text-sm uppercase tracking-widest hover:underline">Index alphabétique complet →</a></p>
         {mrc_sections}
     </main>
@@ -619,7 +619,7 @@ def render_municipalities_index(entries):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toutes les municipalités de l'Estrie | immobiliermaison.com</title>
-    <meta name="description" content="Index de {len(entries)} pages SEO — courtier immobilier par municipalité en Estrie. Équipe Chiasson de Francesco, RE/MAX.">
+    <meta name="description" content="Index de {len(entries)} pages SEO — courtier immobilier par municipalité en Estrie. Équipe Chiasson De Francesco, RE/MAX.">
     <link rel="canonical" href="{BASE_URL}/estrie/municipalites/">
     <meta name="robots" content="index, follow">
     <script src="https://cdn.tailwindcss.com"></script>
